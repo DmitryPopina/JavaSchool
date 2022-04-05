@@ -1,6 +1,7 @@
 package com.github.dmitrypopina.javaschool.lesson1;
 
 import java.util.Scanner;
+
 class Ex1 {
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
@@ -13,7 +14,7 @@ class Ex1 {
                 break;
             }
             if (console.hasNextInt()) {
-                mas[y] = console.nextInt();
+                mas[cnt] = console.nextInt();
                 cnt ++;
             }else{
                 console.next();
