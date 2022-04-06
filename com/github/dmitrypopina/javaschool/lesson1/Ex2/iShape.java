@@ -1,7 +1,5 @@
 package com.github.dmitrypopina.javaschool.lesson1.Ex2;
 
-import java.util.Arrays;
-
 public interface iShape {
     static iShape getShape(int[] len, int cnt) throws Exception {
         switch (cnt) {
