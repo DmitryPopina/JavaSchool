@@ -27,7 +27,6 @@ public class Ex3 {
             } catch (IllegalArgumentException e) {
                 System.out.print("\nНе получилось создать конвертер температур: " + e.getMessage());
             }
-
         }
         //Пробуем расширенный список видов конвертации
         converterBuilder = new AdvancedConvertBuilder();
