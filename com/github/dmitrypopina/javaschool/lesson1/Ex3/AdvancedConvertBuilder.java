@@ -4,7 +4,7 @@ class ReaumurConverter extends Converter{
 
     @Override
     public double convertTo(float degree) {
-        return degree + 1.25;
+        return degree * 0.8;
     }
 }
 
