@@ -3,7 +3,7 @@ package com.github.dmitrypopina.javaschool.lesson1.Ex3;
 class ReaumurConverter extends Converter{
 
     @Override
-    public double convertTo(float degree) {
+    public double convertTo(double degree) {
         return degree * 0.8;
     }
 }

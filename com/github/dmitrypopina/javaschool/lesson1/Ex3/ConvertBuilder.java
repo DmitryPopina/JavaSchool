@@ -3,14 +3,14 @@ package com.github.dmitrypopina.javaschool.lesson1.Ex3;
 class KelvinConverter extends Converter{
 
     @Override
-    public double convertTo(float degree) {
+    public double convertTo(double degree) {
         return degree + 273.15;
     }
 }
 
 class FahrenheitConverter extends Converter{
     @Override
-    public double convertTo(float degree) {
+    public double convertTo(double degree) {
         return (degree * 9 / 5) + 32;
     }
 }
