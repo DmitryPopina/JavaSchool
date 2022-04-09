@@ -16,7 +16,7 @@ public class Car {
 
     @Override
     public boolean equals(Object obj) {
-        return obj.getClass() == this.getClass() && this.type.equals(((Car) obj).getType()) && this.model.equals(((Car) obj).getModel());
+        return obj != null && obj.getClass() == this.getClass() && this.type.equals(((Car) obj).getType()) && this.model.equals(((Car) obj).getModel());
     }
 
     public String getModel() {
