@@ -5,10 +5,12 @@ import java.util.LinkedList;
 public class FileWord implements Comparable<FileWord>{
     private final String word;
     private int count;
+    private final String key;
 
     public FileWord(String word) {
         this.word = word;
         this.count = 1;
+        this.key = word.toLowerCase();
     }
 
     public int inc(){
@@ -17,7 +19,17 @@ public class FileWord implements Comparable<FileWord>{
 
     @Override
     public boolean equals(Object obj) {
-        return obj != null && obj.getClass() == this.getClass() && this.word.equals (((FileWord) obj).getWord());
+        if (obj != null) {
+            if (obj.getClass() == String.class) {
+                return this.word.equalsIgnoreCase(obj.toString());
+            }else if (obj.getClass() == this.getClass()){
+                return this.word.equalsIgnoreCase(((FileWord) obj).getWord());
+            } else {
+                return false;
+            }
+        }
+        return false;
+        //return obj != null && obj.getClass() == this.getClass() && this.word.equalsIgnoreCase(((FileWord) obj).getWord());
     }
 
     @Override
@@ -26,11 +38,15 @@ public class FileWord implements Comparable<FileWord>{
     }
 
     public String getWord() {
-        return word;
+        return this.word;
     }
 
     public int getCount() {
-        return count;
+        return this.count;
+    }
+
+    public String getKey() {
+        return key;
     }
 
     @Override
