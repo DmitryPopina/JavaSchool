@@ -1,9 +1,5 @@
 package com.github.dmitrypopina.javaschool.lesson2.Ex1;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-
 public class Car {
     String model;
     String type;
