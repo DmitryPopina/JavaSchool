@@ -1,13 +1,16 @@
 package com.github.dmitrypopina.javaschool.lesson3.Ex1;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.function.IntBinaryOperator;
 
 public class CountMapImpl<T> implements CountMap<T> {
     private final HashMap<T, Integer> map = new HashMap<>();
     @Override
     public void add(T o) {
-        map.merge(o, 1, (oldValue, newValue) -> ++oldValue);
+        //map.merge(o, 1, (oldValue, newValue) -> ++oldValue);
+        map.merge(o, 1, Integer::sum);
     }
 
     @Override
