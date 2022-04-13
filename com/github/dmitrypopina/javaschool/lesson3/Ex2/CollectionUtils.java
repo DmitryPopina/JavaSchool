@@ -19,7 +19,20 @@ public class CollectionUtils {
     }
 
     public static <T> List<? super T> limit(List<? extends T> source, int size) {
-        return null;
+        if (size < 0) {
+            throw new IllegalArgumentException("Размер листа не может быть меньше 0");
+        }else if (size == 0){
+            return newArrayList();
+        }
+        List<T> res = new ArrayList<>(size);
+        if (size == source.size()) {
+            res.addAll(source);
+        } else {
+            for (int i = 0; i < Math.min(size, source.size()); i ++){
+                res.add(source.get(i));
+            }
+        }
+        return res;
     }
 
     public static <T> void add(List<? super T> source, T o) {
