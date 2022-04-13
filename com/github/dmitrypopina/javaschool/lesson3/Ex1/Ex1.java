@@ -42,6 +42,7 @@ public class Ex1 {
         System.out.println("Count 5 до удаления " + count);
         count = map.remove(6);
         System.out.println("Count 6 до удаления " + count);
+        //проверяем что не свалится
         count = map.remove(6);
         System.out.println("Count 6 до удаления " + count);
 
