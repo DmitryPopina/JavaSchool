@@ -23,15 +23,11 @@ public class CollectionUtils {
             throw new IllegalArgumentException("Размер листа не может быть меньше 0");
         }else if (size == 0){
             return newArrayList();
+        } else if (size > source.size()) {
+            size = source.size();
         }
-        List<T> res = new ArrayList<>(size);
-        if (size == source.size()) {
-            res.addAll(source);
-        } else {
-            for (int i = 0; i < Math.min(size, source.size()); i ++){
-                res.add(source.get(i));
-            }
-        }
+        List<T> res = new ArrayList<>(source);
+        res.subList(size, res.size()) .clear();
         return res;
     }
 

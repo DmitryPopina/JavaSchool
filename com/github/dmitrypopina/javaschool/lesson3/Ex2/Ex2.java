@@ -20,7 +20,9 @@ public class Ex2 {
         System.out.println(list);
         CollectionUtils.addAll(Arrays.asList(2d, 8), list);
         System.out.println(list);
+        System.out.println(CollectionUtils.limit(list, 15));
         System.out.println(CollectionUtils.limit(list, 4));
+
         Comparator<Integer> cmp = Comparator.comparingInt(o -> o);
         System.out.println(CollectionUtils.range(Arrays.asList(8,2,1,3,5,6, 4), 3, 10, cmp));
     }
