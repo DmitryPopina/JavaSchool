@@ -27,7 +27,7 @@ public class CountMapImpl<T> implements CountMap<T> {
 
     @Override
     public int size() {
-        return map.keySet().size();
+        return map.size();
     }
 
     @Override
