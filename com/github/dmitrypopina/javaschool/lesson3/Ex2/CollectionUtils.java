@@ -18,7 +18,7 @@ public class CollectionUtils {
         return source.indexOf(o);
     }
 
-    public static <T> List<? super T> limit(List<? extends T> source, int size) {
+    public static <T> List<? super T> limit(List<? extends T> source, int size) throws IllegalArgumentException {
         if (size < 0) {
             throw new IllegalArgumentException("Размер листа не может быть меньше 0");
         }else if (size == 0){
