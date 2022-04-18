@@ -37,7 +37,7 @@ public class CountMapImpl<T> implements CountMap<T> {
 
     @Override
     public Map<T, Integer> toMap() {
-        return map;
+        return new HashMap<>(map);
     }
 
     @Override
